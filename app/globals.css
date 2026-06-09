@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/*
+  Minimalist photography-portfolio theme, after raulbelinchon.com:
+  near-white ground, near-black ink, neutral grotesque type, no chrome.
+*/
+@theme {
+  --color-ground: #ffffff;
+  --color-ink: #111111;
+  --color-muted: #8a8a8a;
+  --color-faint: #e6e6e6;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: #111;
+  color: #fff;
+}
+
+/* Small-caps navigation label used across the sidebar and footer. */
+.nav-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Thin scrollbars so gallery columns stay quiet. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
