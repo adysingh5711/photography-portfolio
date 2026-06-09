@@ -51,30 +51,31 @@ export function GalleryDetail({ slug }: { slug: string }) {
         )}
       </header>
 
-      <div className="mx-auto flex max-w-[920px] flex-col gap-6 md:gap-10">
+      <div className="mx-auto max-w-[920px] columns-1 gap-6 sm:columns-2 lg:columns-3 [column-fill:_balance]">
         {images.map((img, i) => (
-          <button
-            key={img._id}
-            type="button"
-            onClick={() => setLightbox(i)}
-            className="block w-full cursor-zoom-in"
-          >
-            <SmartImage
-              url={img.url}
-              alt={img.alt}
-              width={img.width}
-              height={img.height}
-              blurDataUrl={img.blurDataUrl}
-              priority={i === 0}
-              sizes="(max-width: 768px) 100vw, 920px"
-              className="h-auto w-full"
-            />
-            {img.caption && (
-              <span className="mt-1 block text-left text-[0.8rem] text-muted">
-                {img.caption}
-              </span>
-            )}
-          </button>
+          <div key={img._id} className="break-inside-avoid mb-6">
+            <button
+              type="button"
+              onClick={() => setLightbox(i)}
+              className="block w-full cursor-zoom-in"
+            >
+              <SmartImage
+                url={img.url}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                blurDataUrl={img.blurDataUrl}
+                priority={i === 0}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 330px"
+                className="h-auto w-full"
+              />
+              {img.caption && (
+                <span className="mt-1 block text-left text-[0.8rem] text-muted">
+                  {img.caption}
+                </span>
+              )}
+            </button>
+          </div>
         ))}
       </div>
 

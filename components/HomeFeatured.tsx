@@ -56,18 +56,19 @@ export function HomeFeatured() {
       )}
 
       {rest.length > 0 && (
-        <div className="mx-auto mt-10 flex max-w-[920px] flex-col gap-6 md:gap-10">
+        <div className="mx-auto mt-10 max-w-[920px] columns-1 gap-6 sm:columns-2 [column-fill:_balance]">
           {rest.slice(0, 4).map((img) => (
-            <SmartImage
-              key={img._id}
-              url={img.url}
-              alt={img.alt}
-              width={img.width}
-              height={img.height}
-              blurDataUrl={img.blurDataUrl}
-              sizes="(max-width: 768px) 100vw, 920px"
-              className="h-auto w-full"
-            />
+            <div key={img._id} className="break-inside-avoid mb-6">
+              <SmartImage
+                url={img.url}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                blurDataUrl={img.blurDataUrl}
+                sizes="(max-width: 768px) 100vw, 460px"
+                className="h-auto w-full"
+              />
+            </div>
           ))}
         </div>
       )}
