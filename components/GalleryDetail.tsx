@@ -100,7 +100,7 @@ export function GalleryDetail({ slug }: { slug: string }) {
           <button
             type="button"
             onClick={() => setLightbox(0)}
-            className="relative z-20 -mx-5 md:-mx-12 h-[80vh] md:h-[90vh] bg-ground shadow-sm overflow-hidden group/hero block w-[calc(100%+2.5rem)] md:w-[calc(100%+6rem)] cursor-zoom-in text-left border-none p-0 outline-none"
+            className="relative z-20 w-full max-w-[1000px] mx-auto h-[80vh] md:h-[90vh] bg-ground shadow-sm overflow-hidden group/hero block cursor-zoom-in text-left border-none p-0 outline-none"
           >
             <SmartImage
               url={heroImage.url}
