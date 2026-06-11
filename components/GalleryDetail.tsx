@@ -100,7 +100,7 @@ export function GalleryDetail({ slug }: { slug: string }) {
           <button
             type="button"
             onClick={() => setLightbox(0)}
-            className="relative z-20 w-full max-w-[1000px] mx-auto h-[80vh] md:h-[90vh] bg-ground shadow-sm overflow-hidden group/hero block cursor-zoom-in text-left border-none p-0 outline-none"
+            className="relative z-20 w-full max-w-250 mx-auto h-[80vh] md:h-[90vh] bg-ground shadow-sm overflow-hidden group/hero block cursor-zoom-in text-left border-none p-0 outline-none"
           >
             <SmartImage
               url={heroImage.url}
@@ -146,7 +146,7 @@ export function GalleryDetail({ slug }: { slug: string }) {
 
       {/* 4. Masonry Grid of Remaining Images */}
       {masonryImages.length > 0 && (
-        <div className="mx-auto max-w-[920px] columns-1 gap-6 sm:columns-2 lg:columns-3 [column-fill:_balance] relative z-20 bg-ground">
+        <div className="mx-auto max-w-230 columns-1 gap-6 sm:columns-2 lg:columns-3 [column-fill:balance] relative z-20 bg-ground">
           {masonryImages.map((img, i) => (
             <div key={img._id} className="break-inside-avoid mb-6">
               <button

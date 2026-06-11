@@ -56,7 +56,7 @@ export function HomeFeatured() {
       )}
 
       {rest.length > 0 && (
-        <div className="mx-auto mt-10 max-w-[920px] columns-1 gap-6 sm:columns-2 [column-fill:_balance]">
+        <div className="mx-auto mt-10 max-w-230 columns-1 gap-6 sm:columns-2 [column-fill:balance]">
           {rest.slice(0, 4).map((img) => (
             <div key={img._id} className="break-inside-avoid mb-6">
               <SmartImage

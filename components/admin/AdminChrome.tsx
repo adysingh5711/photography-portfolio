@@ -49,7 +49,7 @@ export function AdminChrome({ children }: { children: ReactNode }) {
           </button>
         </div>
       </header>
-      <main className="px-6 py-8 max-w-[1100px]">{children}</main>
+      <main className="px-6 py-8 max-w-275">{children}</main>
     </div>
   );
 }
